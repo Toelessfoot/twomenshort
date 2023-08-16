@@ -6,7 +6,6 @@ from selenium.webdriver.common.keys import Keys
 from random import randrange
 
 url = "https://www.ashl.ca/stats-and-schedules/ashl/york-summer/#/schedule?league=6"
-#url = "https://www.canadacomputers.com"
 
 with open("path.txt", "r") as f:
     chrome_user_path = f.read()
