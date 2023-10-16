@@ -4,6 +4,7 @@ from time import sleep
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 from random import randrange
+from twomenshort_sched import twomenshort_sched
 
 url = "https://www.ashl.ca/stats-and-schedules/ashl/york-summer/#/schedule?league=6"
 
@@ -164,7 +165,7 @@ def post_whatsapp(content):
 while True:
     command = goto_whatsapp()
     if command == "/schedule":
-        schedule = get_schedule()
+        schedule = twomenshort_sched()
         post_whatsapp(schedule)
     elif command == "/stats":
         stats = get_stats()
